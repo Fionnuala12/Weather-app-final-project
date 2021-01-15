@@ -10,6 +10,7 @@ img{
     width: 120px;
     margin: 5px;
     margin-right: 20px;
+    float: left;
 }
 
 #temperature {
