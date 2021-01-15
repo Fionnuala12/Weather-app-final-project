@@ -25,11 +25,10 @@ h2{
     font-size: 22px;
 }
 
-ul{
-    line-height: 22px;
-    font-weight: lighter;
-}
 
 .form-control{
     margin-bottom: 10px;
 }
+
+.box {
+    padding: 10px 10px 10px 10px;

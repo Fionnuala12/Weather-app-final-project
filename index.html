@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/911824e75d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -36,20 +37,23 @@
             <div id="description">Sunny</div>
         </div>
         <div class="col-6"> 
-            <ul>
-                <li>
-                    Humidity: <span id="humidity">97</span>%
-                </li>
-                <li>
-                    Wind Speed: <span id="wind">1</span> kmh 
-                </li>
-                <li>
-                    Max Temperature: <span id="max">5</span>°C
-                </li>
-                <li>
-                    Min. Temperature: <span id="min">0</span>°C
-                </li>
-            </ul>
+                <div class="container grid">
+                    <div class="row row-cols-2">
+                        <div class="col box">
+                    <span id="humidity">97</span>%<div><i class="fas fa-tint"></i> Humidity</div>
+                </div>
+                <div class="col box">
+                    <span id="wind">1</span> kmh <div><i class="fas fa-wind"></i> Wind</div>
+            </div>
+            <div class="col box">
+                    <span id="max">5</span>°C <div><i class="fas fa-thermometer-three-quarters"></i> Max Temp</div>
+            </div>
+            <div class="col box">
+                   <span id="min">0</span>°C<div><i class="fas fa-thermometer-quarter"></i>
+                      Min. Temp</div>
+            </div>
+                    </div>
+                </div>
         </div>
     </div>
   </div>
