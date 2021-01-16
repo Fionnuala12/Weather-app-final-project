@@ -18,6 +18,9 @@ function showTemperature(response){
     let city = (response.data.name); 
     let cityName = document.querySelector("#city");
     cityName.innerHTML = city;
+    let icon = document.querySelector("#icon");
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    icon.setAttribute("alt", response.data.weather[0].description);
     let temperature = document.querySelector("#temperature"); 
     temperature.innerHTML = Math.round(response.data.main.temp);
     let windSpeed = document.querySelector("#wind"); 
@@ -36,6 +39,7 @@ function showTemperature(response){
 
 let apiKey = "06c9d19d30f0be8b128071a6b5e0aeb3"; 
 let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=${apiKey}&units=${units}`;
+let city = "Paris"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(showTemperature);
