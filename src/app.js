@@ -14,7 +14,6 @@ function formatDate(timestamp){
 
 
 function showTemperature(response){
-    console.log(response.data);
     let city = (response.data.name); 
     let cityName = document.querySelector("#city");
     cityName.innerHTML = city;
@@ -36,10 +35,23 @@ function showTemperature(response){
     let dateElement = document.querySelector("#date"); 
     dateElement.innerHTML = formatDate(response.data.dt * 1000); 
 }
-
+ 
+function search(city){
 let apiKey = "06c9d19d30f0be8b128071a6b5e0aeb3"; 
 let units = "metric";
-let city = "Paris"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(showTemperature);   
+}
 
-axios.get(apiUrl).then(showTemperature);
+
+
+function submitForm(event){
+   event.preventDefault(); 
+   let cityInput = document.querySelector("#city-name"); 
+   search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submitForm);
+
+search("Paris");
