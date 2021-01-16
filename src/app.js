@@ -1,3 +1,4 @@
+
 function formatDate(timestamp){
     let date = new Date(timestamp); 
     let hours = date.getHours(); 
@@ -11,7 +12,6 @@ function formatDate(timestamp){
     return `${day}, ${hours}:${minutes}`;
 
 }
-
 
 function showTemperature(response){
     let city = (response.data.name); 
@@ -43,15 +43,34 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 axios.get(apiUrl).then(showTemperature);   
 }
 
-
-
 function submitForm(event){
    event.preventDefault(); 
    let cityInput = document.querySelector("#city-name"); 
    search(cityInput.value);
 }
 
+function getCurrentPosition(event){
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position){
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let units = "metric";
+    let apiKey = "06c9d19d30f0be8b128071a6b5e0aeb3";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+    console.log(apiUrl);
+
+    axios.get(apiUrl).then(showTemperature);
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitForm);
+
+let button = document.querySelector("#current-location-button");
+button.addEventListener("click", getCurrentPosition);
+
+
 
 search("Paris");
