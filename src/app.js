@@ -34,6 +34,8 @@ function showTemperature(response){
     minTemp.innerHTML = Math.round(response.data.main.temp_min);  
     let dateElement = document.querySelector("#date"); 
     dateElement.innerHTML = formatDate(response.data.dt * 1000); 
+
+    celsiusTemperature = response.data.main.temp;
 }
  
 function search(city){
@@ -65,12 +67,22 @@ function showPosition(position){
     axios.get(apiUrl).then(showTemperature);
 }
 
+function showFahrenheitTemp(event){
+    event.preventDefault();
+    let temperature = document.querySelector("#temperature"); 
+    let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32; 
+    temperature.innerHTML = Math.round(fahrenheitTemperature );
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitForm);
 
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentPosition);
 
-
+let fahrenheitLink = document.querySelector("#fahrenheit-link"); 
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 search("Paris");
