@@ -12,8 +12,10 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="weather-app">
     <div class="container">
+    <div class="weather-app-wrapper">
+    <div class="weather-app">
+    
         <form id="search-form">
         <div class="row">
             <div class="col-6">
@@ -34,10 +36,14 @@
 
     <div class="row">
         <div class="col-6">
+            <div class="clearfix">
             <img src="" alt="sun with cloud" id="icon">
-            <span id="temperature">22</span><span id="units">°C | F</span>
+            <div class="float-left">
+            <span id="temperature">22</span><span id="units">°C | <a href="#">F°</a></span>
             <div id="description" class="text-capitalize">Sunny</div>
         </div>
+    </div>
+    </div>
         <div class="col-6"> 
                 <div class="container grid">
                     <div class="row row-cols-2">
@@ -59,11 +65,11 @@
         </div>
     </div>
   </div>
-</div>
 <small> 
     <a href="https://github.com/Fionnuala12/weather-app-final-project">Open-source code</a> by Fionnuala Wilson
 </small>
-
+</div>
+</div>
 <script src="src/app.js"></script>
 </body>
 </html>
