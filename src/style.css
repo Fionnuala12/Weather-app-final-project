@@ -1,12 +1,19 @@
 .weather-app-wrapper{
     margin: 30px auto;
     width: 60%;
+    
 }
 
 .weather-app{
     border: 1px solid black;
+    ;
+    border-radius: 20px;
+    background-image: url(https://image.freepik.com/free-photo/abstract-background-twilight-sky-background-pink-gradient-tone-color_63313-152.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 15px;
     font-family: 'Noto Sans JP', sans-serif;
+    color: #2E2C4C
 }
 
 img{
@@ -35,6 +42,7 @@ h2{
 
 .box {
     padding: 10px 10px 10px 10px;
+    
 }
 
 #units{
@@ -57,3 +65,8 @@ h2{
 .inactive {
     text-decoration: none;
 }
+
+.weather-forecast{
+    margin-top: 20px;
+}
+
