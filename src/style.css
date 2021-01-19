@@ -1,3 +1,7 @@
+
+
+
+
 .weather-app-wrapper{
     margin: 30px auto;
     width: 60%;
@@ -68,5 +72,16 @@ h2{
 
 .weather-forecast{
     margin-top: 20px;
+    text-align: center;
+}
+
+.weather-forecast img {
+    margin: 0 auto;
+    display: block;
+    width: 40px;
+}
+
+.weather-forecast h3 {
+    font-size: medium;
 }
 
