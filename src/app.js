@@ -71,7 +71,6 @@ function showForecast(response){
     }   
 }
 
- 
 function search(city){
 let apiKey = "06c9d19d30f0be8b128071a6b5e0aeb3"; 
 let units = "metric";

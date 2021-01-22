@@ -1,34 +1,12 @@
+html {
+    height: 100%;
+  }
 
-
-
-
-.weather-app-wrapper{
-    margin: 30px auto;
-    width: 60%;
-    
-}
-
-.weather-app{
-    border: 1px solid black;
-    ;
-    border-radius: 20px;
-    background-image: url(https://image.freepik.com/free-photo/abstract-background-twilight-sky-background-pink-gradient-tone-color_63313-152.jpg);
+body{
+    background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 15px;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #2E2C4C
-}
-
-img{
-    width: 120px;
-    margin: 5px;
-    margin-right: 20px;
-    float: left;
-}
-
-#temperature {
-    font-size: 52px;
+    width: 100%;
 }
 
 h1{
@@ -37,22 +15,49 @@ h1{
 
 h2{
     font-size: 22px;
+    margin-bottom: 20px;
 }
 
-
-.form-control{
-    margin-bottom: 10px;
+.weather-app-wrapper{
+    margin: 30px auto;
+    max-width: 55%;  
+    line-height: 1.5;  
+    display: block;
 }
 
-.box {
-    padding: 10px 10px 10px 10px;
+.weather-app{
+    border: 0.5px solid #2E2C4C;;
+    border-radius: 20px;
+    background-image: url(https://image.freepik.com/free-photo/abstract-background-twilight-sky-background-pink-gradient-tone-color_63313-152.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    margin: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #2E2C4C; 
+    box-shadow: 7px 5px 5px -2px rgba(0,0,0,0.23)
+}
+
+.today-weather-img{
+    float: left;
+    position: relative;
+    height: 120px;
+    width: 120px; 
+    }
+
+.today-weather-temp{
+    font-size: 64px;
     
 }
 
-#units{
-    position: relative;
-    top: -25px;
-    font-size: 16px;
+#search-form{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.box {
+    padding: 10px;
+    
 }
 
 .active {
@@ -85,3 +90,18 @@ h2{
     font-size: medium;
 }
 
+#description {
+    margin-top: -10px;
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+#units{
+    position: relative;
+    top: -35px;
+    font-size: 16px;
+}
+
+.main-weather{
+margin-right: 20px;
+}
